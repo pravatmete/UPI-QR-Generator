@@ -1,8 +1,8 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 .container{
     height: 100vh;
@@ -10,10 +10,10 @@
     display: flex;
 }
 
-.user-data{
+/* .user-data{
     height: 100%;
     width: 60%;
-    /* background-color: cyan; */
+    background-color: cyan;
     border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
@@ -22,13 +22,17 @@
 .result-data{
     height: 100%;
     width: 40%;
-    /* background-color: blue; */
+    background-color: blue;
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
-/* #qrcode {
-    width:80px;
-    height:80px;
-    margin-top:15px;
-  } */
+#qrcode {
+    margin-top:50px;
+  }
+img{
+    width: 350px;
+    height: 350px;
+    /* border: 10px solid red; */
+    filter: brightness(10);
+}

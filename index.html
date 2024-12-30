@@ -9,11 +9,13 @@
 <body>
     <div class="container">
         <div class="user-data">
-            <input id="text" type="text" value="upi://pay?pa=mete@pnb&pn=Pravat%20Mete&am=77&cu=INR" style="width:80%"/><br />
-
-            <div id="qrcode"></div>
+            <!-- <input id="text" type="text" value="upi://pay?pa=mete@pnb&pn=Pravat%20Mete&am=77&cu=INR"/> -->
+            <input type="text" id="input-data" name="upi-id" placeholder="Enter UPI id" required>
+            <input type="text" id="input-amount" name="upi-ammount" placeholder="Enter Amount">
+            <input type="submit" id="btn" onclick="func()" name="submitBtn">
         </div>
         <div class="result-data">
+            <div id="qrcode"></div>
         </div>
     </div>
 

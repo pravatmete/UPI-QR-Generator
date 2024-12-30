@@ -1,25 +1,48 @@
 var qrcode = new QRCode("qrcode");
+let inputData = document.getElementById("input-data");
+let inputAmount = document.getElementById("input-amount");
+// upi://pay?pa=mete@nsdl&am=77&cu=INR
 
-function makeCode () {    
-  var elText = document.getElementById("text");
-  
-  if (!elText.value) {
-    alert("Input a text");
-    elText.focus();
-    return;
-  }
-  
-  qrcode.makeCode(elText.value);
+
+function func(){
+  function makeCode () { 
+
+        let inputDataValue = inputData.value;
+        let inputAmountValue = inputAmount.value;
+        let data = "upi://pay?pa=";
+        let result = data.concat(inputDataValue);
+        let payAmmount = "&am=";
+        let addAmmount = result.concat(payAmmount);
+        let finalResult = addAmmount.concat(inputAmountValue);
+
+    //   var elText = document.getElementById("text");
+      
+      if (inputDataValue.length==0 && inputAmountValue.length==0) {
+        alert("invalid input")
+        // console.log("give data");
+        inputData.focus();
+        return;
+      }
+      
+    //   qrcode.makeCode(elText.value);
+
+
+
+    qrcode.makeCode(finalResult)
+    }
+    makeCode();
+    
+
 }
 
-makeCode();
-
 // $("#text").
-//   on("blur", function () {
+// on("blur", function () {
+//   makeCode();
+// }).
+// on("keydown", function (e) {
+//   if (e.keyCode == 13) {
 //     makeCode();
-//   }).
-//   on("keydown", function (e) {
-//     if (e.keyCode == 13) {
-//       makeCode();
-//     }
-//   });
+//   }
+// }); 
+
+
