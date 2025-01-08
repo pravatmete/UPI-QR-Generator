@@ -19,8 +19,11 @@ function func(){
       
       if (inputDataValue.length==0 && inputAmountValue.length==0) {
         alert("invalid input")
-        // console.log("give data");
+          
         inputData.focus();
+        return;
+      }else if(inputAmountValue>100000){
+        alert("Amount should be less than 100000");
         return;
       }
       

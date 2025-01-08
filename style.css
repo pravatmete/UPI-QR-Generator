@@ -1,38 +1,75 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
+}
 
 .container{
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-wrap: wrap;
 }
 
-/* .user-data{
-    height: 100%;
-    width: 60%;
-    background-color: cyan;
-    border: 1px solid red;
+.user-data{
+    min-height: 100%;
+    width: 50vw;
+    /* background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%); */
+    background: linear-gradient(270deg, #aef53b, #fa32db);
+    background-size: 200% 200%;
+
+    -webkit-animation: AnimationName 23s ease infinite;
+    -moz-animation: AnimationName 23s ease infinite;
+    animation: AnimationName 23s ease infinite;
+    
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 0% 100% 100% 0% / 0% 30% 70% 100%  ; */
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.user-data > .input-field{
+    height: 2rem;
+    width: 50%;
+   
+}
+.user-data > .submit-btn{
+    height: 2rem;
+    width: 50%;
 }
 
 .result-data{
     height: 100%;
-    width: 40%;
-    background-color: blue;
+    width: 50vw;
+    /* background-color: blue; */
     display: flex;
-    flex-wrap: wrap;
-} */
+    justify-content: center;
+    align-items: center;
+}
 
 #qrcode {
     margin-top:50px;
+
   }
 img{
     width: 350px;
     height: 350px;
     /* border: 10px solid red; */
-    filter: brightness(10);
+    /* filter: brightness(10); */
+    background-color: white;
 }
